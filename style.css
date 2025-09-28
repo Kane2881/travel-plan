@@ -1,0 +1,310 @@
+:root {
+  --clr-neutral-000: hsl(0 0 100);
+  --clr-neutral-900: hsl(0 0 0);
+
+  --clr-primary-000: hsl(129, 53%, 90%); /* nyanza */
+  --clr-primary-100: hsl(141, 45%, 81%); /* celadon */
+  --clr-primary-200: hsl(147, 75%, 89%); /* celadon-2 */
+  --clr-primary-300: hsl(150, 42%, 62%); /* mint */
+  --clr-primary-400: hsl(152, 41%, 52%); /* mint-2*/
+  --clr-primary-500: hsl(153, 39%, 41%); /* sea-green */
+  --clr-primary-600: hsl(153, 40%, 30%); /* dartmouth-green */
+  --clr-primary-700: hsl(155, 43%, 18%); /* brunswick-green */
+  --clr-primary-800: hsl(159, 56%, 7%); /* dark-green */
+
+  /* --clr-primary-hsl-000: 129, 53%, 90%;
+  --clr-primary-hsl-100: 141, 45%, 81%;
+  --clr-primary-hsl-200: 147, 75%, 89%;
+  --clr-primary-hsl-300: 150, 42%, 62%;
+  --clr-primary-hsl-400: 152, 41%, 52%;
+  --clr-primary-hsl-500: 153, 39%, 41%;
+  --clr-primary-hsl-600: 153, 40%, 30%;
+  --clr-primary-hsl-700: 155, 43%, 18%;
+  --clr-primary-hsl-800: 159, 56%, 7%; */
+
+  --clr-secondary-000: hsl(190, 77%, 88%); /* light-cyn */
+  --clr-secondary-100: hsl(190, 76%, 82%); /* non-photo-blue-2 */
+  --clr-secondary-200: hsl(189, 75%, 75%); /* non-photo-blue */
+  --clr-secondary-300: hsl(190, 74%, 59%); /* vivid-sky-blue */
+  --clr-secondary-400: hsl(190, 100%, 42%); /* pacific-cyan */
+  --clr-secondary-500: hsl(195, 100%, 39%); /* blue-green */
+  --clr-secondary-600: hsl(201, 100%, 36%); /* honolulu-blue */
+  --clr-secondary-700: hsl(214, 97%, 27%); /* marine-blue */
+  --clr-secondary-800: hsl(239, 94%, 19%); /* federal-blue */
+
+  --body-gradient: linear-gradient(
+    180deg,
+    hsl(from var(--clr-secondary-000) h s calc(l + 7)),
+    var(--clr-primary-000),
+    var(--clr-primary-100)
+  );
+
+  --ff-base: "Noto Sans JP", sans-serif;
+  --ff-accent: "Great Vibes", cursive;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-xbold: 800;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+
+  background: var(--body-gradient);
+  color: var(--clr-primary-800);
+}
+
+/* components */
+
+.wrapper {
+  width: min(95%, 1110px);
+  margin-inline: auto;
+}
+
+/* utilities */
+
+.flex-group {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+
+.grid-container {
+  display: grid;
+  gap: var(--grid-gap, 1rem);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-top-48 {
+  margin-block-start: 3em;
+}
+
+.margin-top-20 {
+  margin-block-start: 1.25em;
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-900 {
+  font-size: var(--fs-900);
+}
+
+/* block */
+
+/* header */
+
+.header {
+  margin-top: 3em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo */
+
+.logo-wrapper {
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.logo-img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.logo-name {
+  font-family: var(--ff-accent);
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+/* main */
+/* chugoku region section */
+
+.chugoku-region-section {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: hsl(from var(--clr-primary-300) h s l / 0.2);
+}
+
+.chugoku-img {
+  border-radius: 5px;
+}
+
+/* famous places section */
+
+.media-scroller {
+  --_spacer: 1rem;
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 30%;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-element {
+  padding-block: var(--_spacer);
+  /* background-color: hsl(from var(--clr-secondary-000) h s l / 0.5); */
+}
+
+.media-element,
+.media-element img {
+  border-radius: 5px;
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  box-shadow: 0 2px 2px 0 var(--clr-neutral-900);
+}
+
+@media (width > 800px) {
+}
+
+/* standard-premium plan section */
+
+.plans-heading {
+  font-weight: 900;
+}
+
+.standard-plan > p,
+.premium-plan > p {
+  font-weight: var(--fw-bold);
+}
+
+@media (width > 800px) {
+  .standard-premium-plans {
+    margin-top: 5rem; /* temporary fix*/
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .plans-heading {
+    grid-column: 1/ -1;
+  }
+}
