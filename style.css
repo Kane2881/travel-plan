@@ -272,7 +272,7 @@ body {
 }
 
 .media-element {
-  padding-block: var(--_spacer);
+  padding: var(--_spacer);
   /* background-color: hsl(from var(--clr-secondary-000) h s l / 0.5); */
 }
 
