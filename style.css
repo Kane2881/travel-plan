@@ -285,7 +285,7 @@ body {
   inline-size: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  box-shadow: 0 2px 2px 0 var(--clr-neutral-900);
+  box-shadow: 0 5px 10px -2px var(--clr-neutral-900);
 }
 
 .snaps-inline {
