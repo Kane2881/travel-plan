@@ -259,10 +259,16 @@ body {
   display: grid;
   gap: var(--_spacer);
   grid-auto-flow: column;
-  grid-auto-columns: 30%;
+  grid-auto-columns: 68%;
 
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+}
+
+@media (width > 800px) {
+  .media-scroller {
+    grid-auto-columns: 33%;
+  }
 }
 
 .media-element {
@@ -282,7 +288,13 @@ body {
   box-shadow: 0 2px 2px 0 var(--clr-neutral-900);
 }
 
-@media (width > 800px) {
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
 }
 
 /* standard-premium plan section */
