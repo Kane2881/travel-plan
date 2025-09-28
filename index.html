@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -26,18 +27,39 @@
           <h1 class="logo-name">AZ</h1>
         </div>
 
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="nav-lists"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
         <nav class="header-nav">
-          <ul class="nav-lists | flex-group" role="list">
-            <li class="nav-list"><a href="#">Home</a></li>
-            <li class="nav-list"><a href="#">Destination</a></li>
-            <li class="nav-list"><a href="#">About</a></li>
-            <li class="nav-list"><a href="#">Contact</a></li>
+          <ul
+            id="nav-lists"
+            class="nav-lists | flex-group"
+            role="list"
+            data-visible="false"
+          >
+            <li class="nav-list">
+              <a href="#">Home</a>
+            </li>
+            <li class="nav-list">
+              <a href="#">Destination</a>
+            </li>
+            <li class="nav-list">
+              <a href="#">About</a>
+            </li>
+            <li class="nav-list">
+              <a href="#">Contact</a>
+            </li>
           </ul>
         </nav>
       </header>
       <main class="margin-top-48">
-        <section class="chugoku-region-section | grid-container">
-          <div class="chugoku-heading-content-wrapper">
+        <section class="chugoku-region-section | grid-container flow">
+          <div class="chugoku-heading-content-wrapper | flow">
             <h2 class="chugoku-heading | fs-900">中国地方</h2>
             <p class="chugoku-content">
               中国地方は、本州の西にある地域で、鳥取県・島根県・岡山県・広島県・山口県の五つの県からできています。地域は大きく、日本海に面した山陰と、瀬戸内海に面した山陽に分けられます。山陰は自然が豊かで落ち着いた雰囲気があり、山陽は温暖な気候と発展した都市が特徴です。
