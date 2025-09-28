@@ -293,7 +293,7 @@ body {
 
   .mobile-nav-toggle {
     display: block;
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     right: 1rem;
     width: 2rem;
